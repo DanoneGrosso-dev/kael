@@ -1,0 +1,26 @@
+const db = require("../database.js");
+const moment = require('moment');
+    	moment.locale('pt-BR');
+
+exports.run = async function (o, n) {
+
+var createAccount = id => {
+  return new Promise((res) => {
+    var pessoa = new db.Users({ _id: id })
+    pessoa.save();
+    res(pessoa)
+  })
+}
+ 
+   if (o.username != n.username) {
+    db.Users.findOne({ _id: n.id }, async (e, d) => {
+      if (!d) d = await createAccount(n.id)
+
+      let names = d.names
+      names.push(o.username +"#"+ o.discriminator +" - **("+ moment().format('LLL') +")**")
+      d.names = names
+      d.save()
+    })
+  }
+};
+  

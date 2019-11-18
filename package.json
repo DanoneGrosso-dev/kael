@@ -1,0 +1,26 @@
+{
+  "name": "projectk",
+  "version": "1.0.0",
+  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "main": "index.js",
+  "repository": "",
+  "author": "! Aquaman#001",
+  "dependencies": {
+    "async": "~0.2.8",
+    "canvas": "^2.0.1",
+    "capslock": "^1.0.1",
+    "chalk": "^2.4.1",
+    "discord-anti-spam": "^1.1.6",
+    "discord.js": "^11.4.2",
+    "express": "~3.2.4",
+    "ffmpeg": "0.0.4",
+    "google-translate-api": "^2.3.0",
+    "humanize-duration": "^3.15.3",
+    "moment": "^2.22.2",
+    "mongoose": "^5.3.6",
+    "pixel-util": "0.0.2",
+    "snekfetch": "^4.0.4",
+    "socket.io": "~0.9.14",
+    "ytdl-core": "^0.28.0"
+  }
+}
